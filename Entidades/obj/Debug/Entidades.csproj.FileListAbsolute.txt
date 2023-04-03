@@ -1,0 +1,16 @@
+C:\Users\Leonel\Desktop\Tesis\Programa tesis\PlatinumGym\Entidades\bin\Debug\Entidades.dll
+C:\Users\Leonel\Desktop\Tesis\Programa tesis\PlatinumGym\Entidades\bin\Debug\Entidades.pdb
+C:\Users\Leonel\Desktop\Tesis\Programa tesis\PlatinumGym\Entidades\obj\Debug\Entidades.csprojResolveAssemblyReference.cache
+C:\Users\Leonel\Desktop\Tesis\Programa tesis\PlatinumGym\Entidades\obj\Debug\Entidades.dll
+C:\Users\Leonel\Desktop\Tesis\Programa tesis\PlatinumGym\Entidades\obj\Debug\Entidades.pdb
+D:\PlatinumGym\Entidades\bin\Debug\Entidades.dll
+D:\PlatinumGym\Entidades\bin\Debug\Entidades.pdb
+D:\PlatinumGym\Entidades\obj\Debug\Entidades.csprojResolveAssemblyReference.cache
+D:\PlatinumGym\Entidades\obj\Debug\Entidades.dll
+D:\PlatinumGym\Entidades\obj\Debug\Entidades.pdb
+C:\Users\leone\OneDrive\Documentos\Visual Studio 2017\Proyectos\PlatinumGym\Entidades\bin\Debug\Entidades.dll
+C:\Users\leone\OneDrive\Documentos\Visual Studio 2017\Proyectos\PlatinumGym\Entidades\bin\Debug\Entidades.pdb
+C:\Users\leone\OneDrive\Documentos\Visual Studio 2017\Proyectos\PlatinumGym\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache
+C:\Users\leone\OneDrive\Documentos\Visual Studio 2017\Proyectos\PlatinumGym\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\leone\OneDrive\Documentos\Visual Studio 2017\Proyectos\PlatinumGym\Entidades\obj\Debug\Entidades.dll
+C:\Users\leone\OneDrive\Documentos\Visual Studio 2017\Proyectos\PlatinumGym\Entidades\obj\Debug\Entidades.pdb

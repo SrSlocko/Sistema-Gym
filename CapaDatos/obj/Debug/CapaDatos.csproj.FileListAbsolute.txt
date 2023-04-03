@@ -1,0 +1,26 @@
+C:\Users\Leonel\Desktop\Tesis\Programa tesis\PlatinumGym\CapaDatos\bin\Debug\CapaDatos.dll.config
+C:\Users\Leonel\Desktop\Tesis\Programa tesis\PlatinumGym\CapaDatos\bin\Debug\CapaDatos.dll
+C:\Users\Leonel\Desktop\Tesis\Programa tesis\PlatinumGym\CapaDatos\bin\Debug\CapaDatos.pdb
+C:\Users\Leonel\Desktop\Tesis\Programa tesis\PlatinumGym\CapaDatos\bin\Debug\Entidades.dll
+C:\Users\Leonel\Desktop\Tesis\Programa tesis\PlatinumGym\CapaDatos\bin\Debug\Entidades.pdb
+C:\Users\Leonel\Desktop\Tesis\Programa tesis\PlatinumGym\CapaDatos\obj\Debug\CapaDatos.csprojResolveAssemblyReference.cache
+C:\Users\Leonel\Desktop\Tesis\Programa tesis\PlatinumGym\CapaDatos\obj\Debug\CapaDatos.dll
+C:\Users\Leonel\Desktop\Tesis\Programa tesis\PlatinumGym\CapaDatos\obj\Debug\CapaDatos.pdb
+D:\PlatinumGym\CapaDatos\bin\Debug\CapaDatos.dll.config
+D:\PlatinumGym\CapaDatos\bin\Debug\CapaDatos.dll
+D:\PlatinumGym\CapaDatos\bin\Debug\CapaDatos.pdb
+D:\PlatinumGym\CapaDatos\bin\Debug\Entidades.dll
+D:\PlatinumGym\CapaDatos\bin\Debug\Entidades.pdb
+D:\PlatinumGym\CapaDatos\obj\Debug\CapaDatos.csprojResolveAssemblyReference.cache
+D:\PlatinumGym\CapaDatos\obj\Debug\CapaDatos.dll
+D:\PlatinumGym\CapaDatos\obj\Debug\CapaDatos.pdb
+C:\Users\leone\OneDrive\Documentos\Visual Studio 2017\Proyectos\PlatinumGym\CapaDatos\bin\Debug\CapaDatos.dll.config
+C:\Users\leone\OneDrive\Documentos\Visual Studio 2017\Proyectos\PlatinumGym\CapaDatos\bin\Debug\CapaDatos.dll
+C:\Users\leone\OneDrive\Documentos\Visual Studio 2017\Proyectos\PlatinumGym\CapaDatos\bin\Debug\CapaDatos.pdb
+C:\Users\leone\OneDrive\Documentos\Visual Studio 2017\Proyectos\PlatinumGym\CapaDatos\bin\Debug\Entidades.dll
+C:\Users\leone\OneDrive\Documentos\Visual Studio 2017\Proyectos\PlatinumGym\CapaDatos\bin\Debug\Entidades.pdb
+C:\Users\leone\OneDrive\Documentos\Visual Studio 2017\Proyectos\PlatinumGym\CapaDatos\obj\Debug\CapaDatos.csprojAssemblyReference.cache
+C:\Users\leone\OneDrive\Documentos\Visual Studio 2017\Proyectos\PlatinumGym\CapaDatos\obj\Debug\CapaDatos.csproj.CoreCompileInputs.cache
+C:\Users\leone\OneDrive\Documentos\Visual Studio 2017\Proyectos\PlatinumGym\CapaDatos\obj\Debug\CapaDatos.csproj.CopyComplete
+C:\Users\leone\OneDrive\Documentos\Visual Studio 2017\Proyectos\PlatinumGym\CapaDatos\obj\Debug\CapaDatos.dll
+C:\Users\leone\OneDrive\Documentos\Visual Studio 2017\Proyectos\PlatinumGym\CapaDatos\obj\Debug\CapaDatos.pdb

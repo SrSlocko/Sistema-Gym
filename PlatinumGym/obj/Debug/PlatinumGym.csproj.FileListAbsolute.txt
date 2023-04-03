@@ -1,0 +1,102 @@
+C:\Users\Leonel\Desktop\Tesis\Programa tesis\PlatinumGym\PlatinumGym\bin\Debug\PlatinumGym.exe.config
+C:\Users\Leonel\Desktop\Tesis\Programa tesis\PlatinumGym\PlatinumGym\bin\Debug\PlatinumGym.exe
+C:\Users\Leonel\Desktop\Tesis\Programa tesis\PlatinumGym\PlatinumGym\bin\Debug\PlatinumGym.pdb
+C:\Users\Leonel\Desktop\Tesis\Programa tesis\PlatinumGym\PlatinumGym\obj\Debug\PlatinumGym.csprojResolveAssemblyReference.cache
+C:\Users\Leonel\Desktop\Tesis\Programa tesis\PlatinumGym\PlatinumGym\obj\Debug\PlatinumGym.Properties.Resources.resources
+C:\Users\Leonel\Desktop\Tesis\Programa tesis\PlatinumGym\PlatinumGym\obj\Debug\PlatinumGym.csproj.GenerateResource.Cache
+C:\Users\Leonel\Desktop\Tesis\Programa tesis\PlatinumGym\PlatinumGym\obj\Debug\PlatinumGym.exe
+C:\Users\Leonel\Desktop\Tesis\Programa tesis\PlatinumGym\PlatinumGym\obj\Debug\PlatinumGym.pdb
+C:\Users\Leonel\Desktop\Tesis\Programa tesis\PlatinumGym\PlatinumGym\obj\Debug\PlatinumGym.Formularios.frmMenuPrincipal.resources
+C:\Users\Leonel\Desktop\Tesis\Programa tesis\PlatinumGym\PlatinumGym\obj\Debug\PlatinumGym.Formularios.frmMenbresias.resources
+C:\Users\Leonel\Desktop\Tesis\Programa tesis\PlatinumGym\PlatinumGym\obj\Debug\PlatinumGym.Formularios.frmProductos.resources
+C:\Users\Leonel\Desktop\Tesis\Programa tesis\PlatinumGym\PlatinumGym\obj\Debug\PlatinumGym.Formularios.frmProveedores.resources
+C:\Users\Leonel\Desktop\Tesis\Programa tesis\PlatinumGym\PlatinumGym\obj\Debug\PlatinumGym.Formularios.frmLogin.resources
+C:\Users\Leonel\Desktop\Tesis\Programa tesis\PlatinumGym\PlatinumGym\bin\Debug\CapaDatos.dll
+C:\Users\Leonel\Desktop\Tesis\Programa tesis\PlatinumGym\PlatinumGym\bin\Debug\Entidades.dll
+C:\Users\Leonel\Desktop\Tesis\Programa tesis\PlatinumGym\PlatinumGym\bin\Debug\LogicaNegocio.dll
+C:\Users\Leonel\Desktop\Tesis\Programa tesis\PlatinumGym\PlatinumGym\bin\Debug\CapaDatos.pdb
+C:\Users\Leonel\Desktop\Tesis\Programa tesis\PlatinumGym\PlatinumGym\bin\Debug\Entidades.pdb
+C:\Users\Leonel\Desktop\Tesis\Programa tesis\PlatinumGym\PlatinumGym\bin\Debug\LogicaNegocio.pdb
+C:\Users\Leonel\Desktop\Tesis\Programa tesis\PlatinumGym\PlatinumGym\obj\Debug\PlatinumGym.Formularios.frmListadeMembresias.resources
+C:\Users\Leonel\Desktop\Tesis\Programa tesis\PlatinumGym\PlatinumGym\obj\Debug\PlatinumGym.Formularios.frmListadeProductos.resources
+C:\Users\Leonel\Desktop\Tesis\Programa tesis\PlatinumGym\PlatinumGym\obj\Debug\PlatinumGym.Formularios.frmFactura.resources
+C:\Users\Leonel\Desktop\Tesis\Programa tesis\PlatinumGym\PlatinumGym\obj\Debug\PlatinumGym.Formularios.frmListadeFacturas.resources
+C:\Users\Leonel\Desktop\Tesis\Programa tesis\PlatinumGym\PlatinumGym\obj\Debug\PlatinumGym.Formularios.frmListadeSocios.resources
+C:\Users\Leonel\Desktop\Tesis\Programa tesis\PlatinumGym\PlatinumGym\obj\Debug\PlatinumGym.Formularios.FrmSocios.resources
+C:\Users\Leonel\Desktop\Tesis\Programa tesis\PlatinumGym\PlatinumGym\obj\Debug\PlatinumGym.Formularios.frmListadeRegistro.resources
+C:\Users\Leonel\Desktop\Tesis\Programa tesis\PlatinumGym\PlatinumGym\obj\Debug\PlatinumGym.Formularios.frmRoles.resources
+C:\Users\Leonel\Desktop\Tesis\Programa tesis\PlatinumGym\PlatinumGym\obj\Debug\PlatinumGym.Formularios.frmUsuarios.resources
+C:\Users\Leonel\Desktop\Tesis\Programa tesis\PlatinumGym\PlatinumGym\obj\Debug\PlatinumGym.Formularios.frmCategorias.resources
+C:\Users\Leonel\Desktop\Tesis\Programa tesis\PlatinumGym\PlatinumGym\obj\Debug\PlatinumGym.Formularios.frmPresentanciones.resources
+C:\Users\Leonel\Desktop\Tesis\Programa tesis\PlatinumGym\PlatinumGym\obj\Debug\PlatinumGym.Formularios.frmRespaldo.resources
+C:\Users\Leonel\Desktop\Tesis\Programa tesis\PlatinumGym\PlatinumGym\obj\Debug\PlatinumGym.Formularios.frmCasilleros.resources
+C:\Users\Leonel\Desktop\Tesis\Programa tesis\PlatinumGym\PlatinumGym\obj\Debug\PlatinumGym.Formularios.frmChkIngresoRegistrado.resources
+D:\PlatinumGym\PlatinumGym\bin\Debug\PlatinumGym.exe.config
+D:\PlatinumGym\PlatinumGym\obj\Debug\PlatinumGym.exe
+D:\PlatinumGym\PlatinumGym\obj\Debug\PlatinumGym.pdb
+D:\PlatinumGym\PlatinumGym\bin\Debug\PlatinumGym.exe
+D:\PlatinumGym\PlatinumGym\bin\Debug\PlatinumGym.pdb
+D:\PlatinumGym\PlatinumGym\bin\Debug\CapaDatos.dll
+D:\PlatinumGym\PlatinumGym\bin\Debug\Entidades.dll
+D:\PlatinumGym\PlatinumGym\bin\Debug\LogicaNegocio.dll
+D:\PlatinumGym\PlatinumGym\bin\Debug\CapaDatos.pdb
+D:\PlatinumGym\PlatinumGym\bin\Debug\Entidades.pdb
+D:\PlatinumGym\PlatinumGym\bin\Debug\LogicaNegocio.pdb
+D:\PlatinumGym\PlatinumGym\obj\Debug\PlatinumGym.csprojResolveAssemblyReference.cache
+D:\PlatinumGym\PlatinumGym\obj\Debug\PlatinumGym.Formularios.frmCasilleros.resources
+D:\PlatinumGym\PlatinumGym\obj\Debug\PlatinumGym.Formularios.frmCategorias.resources
+D:\PlatinumGym\PlatinumGym\obj\Debug\PlatinumGym.Formularios.frmChkIngresoRegistrado.resources
+D:\PlatinumGym\PlatinumGym\obj\Debug\PlatinumGym.Formularios.frmFactura.resources
+D:\PlatinumGym\PlatinumGym\obj\Debug\PlatinumGym.Formularios.frmListadeFacturas.resources
+D:\PlatinumGym\PlatinumGym\obj\Debug\PlatinumGym.Formularios.frmListadeMembresias.resources
+D:\PlatinumGym\PlatinumGym\obj\Debug\PlatinumGym.Formularios.frmListadeProductos.resources
+D:\PlatinumGym\PlatinumGym\obj\Debug\PlatinumGym.Formularios.frmListadeRegistro.resources
+D:\PlatinumGym\PlatinumGym\obj\Debug\PlatinumGym.Formularios.frmListadeSocios.resources
+D:\PlatinumGym\PlatinumGym\obj\Debug\PlatinumGym.Formularios.frmMenbresias.resources
+D:\PlatinumGym\PlatinumGym\obj\Debug\PlatinumGym.Formularios.frmPresentanciones.resources
+D:\PlatinumGym\PlatinumGym\obj\Debug\PlatinumGym.Formularios.frmProductos.resources
+D:\PlatinumGym\PlatinumGym\obj\Debug\PlatinumGym.Formularios.frmProveedores.resources
+D:\PlatinumGym\PlatinumGym\obj\Debug\PlatinumGym.Formularios.frmLogin.resources
+D:\PlatinumGym\PlatinumGym\obj\Debug\PlatinumGym.Formularios.frmMenuPrincipal.resources
+D:\PlatinumGym\PlatinumGym\obj\Debug\PlatinumGym.Formularios.frmRespaldo.resources
+D:\PlatinumGym\PlatinumGym\obj\Debug\PlatinumGym.Formularios.frmRoles.resources
+D:\PlatinumGym\PlatinumGym\obj\Debug\PlatinumGym.Formularios.frmUsuarios.resources
+D:\PlatinumGym\PlatinumGym\obj\Debug\PlatinumGym.Formularios.FrmSocios.resources
+D:\PlatinumGym\PlatinumGym\obj\Debug\PlatinumGym.Properties.Resources.resources
+D:\PlatinumGym\PlatinumGym\obj\Debug\PlatinumGym.csproj.GenerateResource.Cache
+C:\Users\leone\OneDrive\Documentos\Visual Studio 2017\Proyectos\PlatinumGym\PlatinumGym\bin\Debug\PlatinumGym.exe.config
+C:\Users\leone\OneDrive\Documentos\Visual Studio 2017\Proyectos\PlatinumGym\PlatinumGym\bin\Debug\PlatinumGym.exe
+C:\Users\leone\OneDrive\Documentos\Visual Studio 2017\Proyectos\PlatinumGym\PlatinumGym\bin\Debug\PlatinumGym.pdb
+C:\Users\leone\OneDrive\Documentos\Visual Studio 2017\Proyectos\PlatinumGym\PlatinumGym\bin\Debug\CapaDatos.dll
+C:\Users\leone\OneDrive\Documentos\Visual Studio 2017\Proyectos\PlatinumGym\PlatinumGym\bin\Debug\Entidades.dll
+C:\Users\leone\OneDrive\Documentos\Visual Studio 2017\Proyectos\PlatinumGym\PlatinumGym\bin\Debug\LogicaNegocio.dll
+C:\Users\leone\OneDrive\Documentos\Visual Studio 2017\Proyectos\PlatinumGym\PlatinumGym\bin\Debug\CapaDatos.pdb
+C:\Users\leone\OneDrive\Documentos\Visual Studio 2017\Proyectos\PlatinumGym\PlatinumGym\bin\Debug\CapaDatos.dll.config
+C:\Users\leone\OneDrive\Documentos\Visual Studio 2017\Proyectos\PlatinumGym\PlatinumGym\bin\Debug\Entidades.pdb
+C:\Users\leone\OneDrive\Documentos\Visual Studio 2017\Proyectos\PlatinumGym\PlatinumGym\bin\Debug\LogicaNegocio.pdb
+C:\Users\leone\OneDrive\Documentos\Visual Studio 2017\Proyectos\PlatinumGym\PlatinumGym\obj\Debug\PlatinumGym.csprojAssemblyReference.cache
+C:\Users\leone\OneDrive\Documentos\Visual Studio 2017\Proyectos\PlatinumGym\PlatinumGym\obj\Debug\PlatinumGym.Formularios.frmCasilleros.resources
+C:\Users\leone\OneDrive\Documentos\Visual Studio 2017\Proyectos\PlatinumGym\PlatinumGym\obj\Debug\PlatinumGym.Formularios.frmCategorias.resources
+C:\Users\leone\OneDrive\Documentos\Visual Studio 2017\Proyectos\PlatinumGym\PlatinumGym\obj\Debug\PlatinumGym.Formularios.frmChkIngresoRegistrado.resources
+C:\Users\leone\OneDrive\Documentos\Visual Studio 2017\Proyectos\PlatinumGym\PlatinumGym\obj\Debug\PlatinumGym.Formularios.frmFactura.resources
+C:\Users\leone\OneDrive\Documentos\Visual Studio 2017\Proyectos\PlatinumGym\PlatinumGym\obj\Debug\PlatinumGym.Formularios.frmListadeFacturas.resources
+C:\Users\leone\OneDrive\Documentos\Visual Studio 2017\Proyectos\PlatinumGym\PlatinumGym\obj\Debug\PlatinumGym.Formularios.frmListadeMembresias.resources
+C:\Users\leone\OneDrive\Documentos\Visual Studio 2017\Proyectos\PlatinumGym\PlatinumGym\obj\Debug\PlatinumGym.Formularios.frmListadeProductos.resources
+C:\Users\leone\OneDrive\Documentos\Visual Studio 2017\Proyectos\PlatinumGym\PlatinumGym\obj\Debug\PlatinumGym.Formularios.frmListadeRegistro.resources
+C:\Users\leone\OneDrive\Documentos\Visual Studio 2017\Proyectos\PlatinumGym\PlatinumGym\obj\Debug\PlatinumGym.Formularios.frmListadeSocios.resources
+C:\Users\leone\OneDrive\Documentos\Visual Studio 2017\Proyectos\PlatinumGym\PlatinumGym\obj\Debug\PlatinumGym.Formularios.frmMenbresias.resources
+C:\Users\leone\OneDrive\Documentos\Visual Studio 2017\Proyectos\PlatinumGym\PlatinumGym\obj\Debug\PlatinumGym.Formularios.frmPresentanciones.resources
+C:\Users\leone\OneDrive\Documentos\Visual Studio 2017\Proyectos\PlatinumGym\PlatinumGym\obj\Debug\PlatinumGym.Formularios.frmProductos.resources
+C:\Users\leone\OneDrive\Documentos\Visual Studio 2017\Proyectos\PlatinumGym\PlatinumGym\obj\Debug\PlatinumGym.Formularios.frmProveedores.resources
+C:\Users\leone\OneDrive\Documentos\Visual Studio 2017\Proyectos\PlatinumGym\PlatinumGym\obj\Debug\PlatinumGym.Formularios.frmLogin.resources
+C:\Users\leone\OneDrive\Documentos\Visual Studio 2017\Proyectos\PlatinumGym\PlatinumGym\obj\Debug\PlatinumGym.Formularios.frmMenuPrincipal.resources
+C:\Users\leone\OneDrive\Documentos\Visual Studio 2017\Proyectos\PlatinumGym\PlatinumGym\obj\Debug\PlatinumGym.Formularios.frmRespaldo.resources
+C:\Users\leone\OneDrive\Documentos\Visual Studio 2017\Proyectos\PlatinumGym\PlatinumGym\obj\Debug\PlatinumGym.Formularios.frmRoles.resources
+C:\Users\leone\OneDrive\Documentos\Visual Studio 2017\Proyectos\PlatinumGym\PlatinumGym\obj\Debug\PlatinumGym.Formularios.frmUsuarios.resources
+C:\Users\leone\OneDrive\Documentos\Visual Studio 2017\Proyectos\PlatinumGym\PlatinumGym\obj\Debug\PlatinumGym.Formularios.FrmSocios.resources
+C:\Users\leone\OneDrive\Documentos\Visual Studio 2017\Proyectos\PlatinumGym\PlatinumGym\obj\Debug\PlatinumGym.Properties.Resources.resources
+C:\Users\leone\OneDrive\Documentos\Visual Studio 2017\Proyectos\PlatinumGym\PlatinumGym\obj\Debug\PlatinumGym.csproj.GenerateResource.cache
+C:\Users\leone\OneDrive\Documentos\Visual Studio 2017\Proyectos\PlatinumGym\PlatinumGym\obj\Debug\PlatinumGym.csproj.CoreCompileInputs.cache
+C:\Users\leone\OneDrive\Documentos\Visual Studio 2017\Proyectos\PlatinumGym\PlatinumGym\obj\Debug\PlatinumGym.csproj.CopyComplete
+C:\Users\leone\OneDrive\Documentos\Visual Studio 2017\Proyectos\PlatinumGym\PlatinumGym\obj\Debug\PlatinumGym.exe
+C:\Users\leone\OneDrive\Documentos\Visual Studio 2017\Proyectos\PlatinumGym\PlatinumGym\obj\Debug\PlatinumGym.pdb

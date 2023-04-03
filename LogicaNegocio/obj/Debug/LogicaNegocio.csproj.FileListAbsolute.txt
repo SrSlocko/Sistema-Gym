@@ -1,0 +1,30 @@
+C:\Users\Leonel\Desktop\Tesis\Programa tesis\PlatinumGym\LogicaNegocio\bin\Debug\LogicaNegocio.dll
+C:\Users\Leonel\Desktop\Tesis\Programa tesis\PlatinumGym\LogicaNegocio\bin\Debug\LogicaNegocio.pdb
+C:\Users\Leonel\Desktop\Tesis\Programa tesis\PlatinumGym\LogicaNegocio\bin\Debug\CapaDatos.dll
+C:\Users\Leonel\Desktop\Tesis\Programa tesis\PlatinumGym\LogicaNegocio\bin\Debug\Entidades.dll
+C:\Users\Leonel\Desktop\Tesis\Programa tesis\PlatinumGym\LogicaNegocio\bin\Debug\CapaDatos.pdb
+C:\Users\Leonel\Desktop\Tesis\Programa tesis\PlatinumGym\LogicaNegocio\bin\Debug\Entidades.pdb
+C:\Users\Leonel\Desktop\Tesis\Programa tesis\PlatinumGym\LogicaNegocio\obj\Debug\LogicaNegocio.csprojResolveAssemblyReference.cache
+C:\Users\Leonel\Desktop\Tesis\Programa tesis\PlatinumGym\LogicaNegocio\obj\Debug\LogicaNegocio.dll
+C:\Users\Leonel\Desktop\Tesis\Programa tesis\PlatinumGym\LogicaNegocio\obj\Debug\LogicaNegocio.pdb
+D:\PlatinumGym\LogicaNegocio\bin\Debug\LogicaNegocio.dll
+D:\PlatinumGym\LogicaNegocio\bin\Debug\LogicaNegocio.pdb
+D:\PlatinumGym\LogicaNegocio\bin\Debug\CapaDatos.dll
+D:\PlatinumGym\LogicaNegocio\bin\Debug\Entidades.dll
+D:\PlatinumGym\LogicaNegocio\bin\Debug\CapaDatos.pdb
+D:\PlatinumGym\LogicaNegocio\bin\Debug\Entidades.pdb
+D:\PlatinumGym\LogicaNegocio\obj\Debug\LogicaNegocio.csprojResolveAssemblyReference.cache
+D:\PlatinumGym\LogicaNegocio\obj\Debug\LogicaNegocio.dll
+D:\PlatinumGym\LogicaNegocio\obj\Debug\LogicaNegocio.pdb
+C:\Users\leone\OneDrive\Documentos\Visual Studio 2017\Proyectos\PlatinumGym\LogicaNegocio\bin\Debug\LogicaNegocio.dll
+C:\Users\leone\OneDrive\Documentos\Visual Studio 2017\Proyectos\PlatinumGym\LogicaNegocio\bin\Debug\LogicaNegocio.pdb
+C:\Users\leone\OneDrive\Documentos\Visual Studio 2017\Proyectos\PlatinumGym\LogicaNegocio\bin\Debug\CapaDatos.dll
+C:\Users\leone\OneDrive\Documentos\Visual Studio 2017\Proyectos\PlatinumGym\LogicaNegocio\bin\Debug\Entidades.dll
+C:\Users\leone\OneDrive\Documentos\Visual Studio 2017\Proyectos\PlatinumGym\LogicaNegocio\bin\Debug\CapaDatos.pdb
+C:\Users\leone\OneDrive\Documentos\Visual Studio 2017\Proyectos\PlatinumGym\LogicaNegocio\bin\Debug\CapaDatos.dll.config
+C:\Users\leone\OneDrive\Documentos\Visual Studio 2017\Proyectos\PlatinumGym\LogicaNegocio\bin\Debug\Entidades.pdb
+C:\Users\leone\OneDrive\Documentos\Visual Studio 2017\Proyectos\PlatinumGym\LogicaNegocio\obj\Debug\LogicaNegocio.csprojAssemblyReference.cache
+C:\Users\leone\OneDrive\Documentos\Visual Studio 2017\Proyectos\PlatinumGym\LogicaNegocio\obj\Debug\LogicaNegocio.csproj.CoreCompileInputs.cache
+C:\Users\leone\OneDrive\Documentos\Visual Studio 2017\Proyectos\PlatinumGym\LogicaNegocio\obj\Debug\LogicaNegocio.csproj.CopyComplete
+C:\Users\leone\OneDrive\Documentos\Visual Studio 2017\Proyectos\PlatinumGym\LogicaNegocio\obj\Debug\LogicaNegocio.dll
+C:\Users\leone\OneDrive\Documentos\Visual Studio 2017\Proyectos\PlatinumGym\LogicaNegocio\obj\Debug\LogicaNegocio.pdb

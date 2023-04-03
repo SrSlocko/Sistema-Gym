@@ -1,0 +1,597 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="SistemaGimnasio" Class="ConexionBDDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=SistemaGimnasio;Integrated Security=True" SettingsObjectName="CapaDatos.Properties.Settings" SettingsPropertyName="SistemaGimnasioConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Roles" Member="Roles">
+    <Type Name="Roles">
+      <Column Name="IdeRol" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NombreRol" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Clientes" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Usuarios" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Roles" Member="Roles1" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Casilleros" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Membresias" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Productos" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Respaldo" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="RegistrarVisitas" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="Roles_Usuarios" Member="Usuarios1" ThisKey="IdeRol" OtherKey="IdeRol" Type="Usuarios" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Usuarios" Member="Usuarios">
+    <Type Name="Usuarios">
+      <Column Name="IdeUsu" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NombreUsu" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CedulaUsu" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LoginUsu" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="PasswordUsu" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="IdeRol" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ActivoUsu" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="Roles_Usuarios" Member="Roles" ThisKey="IdeRol" OtherKey="IdeRol" Type="Roles" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Articulos" Member="Articulos">
+    <Type Name="Articulos">
+      <Column Name="IdArti" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NombreArti" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="IdCate" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IdPrese" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IdProve" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PresCompra" Type="System.Decimal" DbType="Decimal(7,2)" CanBeNull="true" />
+      <Column Name="PreVenta" Type="System.Decimal" DbType="Decimal(7,2)" CanBeNull="true" />
+      <Column Name="StockArti" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Categorias_Articulos" Member="Categorias" ThisKey="IdCate" OtherKey="IdCate" Type="Categorias" IsForeignKey="true" />
+      <Association Name="Presentaciones_Articulos" Member="Presentaciones" ThisKey="IdPrese" OtherKey="IdPrese" Type="Presentaciones" IsForeignKey="true" />
+      <Association Name="Proveedores_Articulos" Member="Proveedores" ThisKey="IdProve" OtherKey="idProve" Type="Proveedores" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Categorias" Member="Categorias">
+    <Type Name="Categorias">
+      <Column Name="IdCate" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NombreCate" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="DescripcionCate" Type="System.String" DbType="NVarChar(70)" CanBeNull="true" />
+      <Association Name="Categorias_Articulos" Member="Articulos" ThisKey="IdCate" OtherKey="IdCate" Type="Articulos" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Presentaciones" Member="Presentaciones">
+    <Type Name="Presentaciones">
+      <Column Name="IdPrese" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NombrePrese" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="DescripcionPrese" Type="System.String" DbType="NVarChar(70)" CanBeNull="true" />
+      <Association Name="Presentaciones_Articulos" Member="Articulos" ThisKey="IdPrese" OtherKey="IdPrese" Type="Articulos" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Proveedores" Member="Proveedores">
+    <Type Name="Proveedores">
+      <Column Name="idProve" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="RucProve" Type="System.String" DbType="NVarChar(13)" CanBeNull="true" />
+      <Column Name="Nombre" Type="System.String" DbType="NVarChar(70)" CanBeNull="true" />
+      <Column Name="DireccionProve" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="TelefonoProve" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Association Name="Proveedores_Articulos" Member="Articulos" ThisKey="idProve" OtherKey="IdProve" Type="Articulos" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Membresias" Member="Membresias">
+    <Type Name="Membresias">
+      <Column Name="IdeMembresia" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NombreMembr" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IniciMembr" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="FinalMembr" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="CostoMembr" Type="System.Decimal" DbType="Decimal(7,2)" CanBeNull="true" />
+      <Column Name="PromoMembr" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Association Name="Membresias_Registrodiario" Member="Registrodiario" ThisKey="IdeMembresia" OtherKey="IdeMembresia" Type="Registrodiario" />
+      <Association Name="Membresias_DetalleFactura" Member="DetalleFactura" ThisKey="IdeMembresia" OtherKey="IdeMembresia" Type="DetalleFactura" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CabeceraFactura" Member="CabeceraFactura">
+    <Type Name="CabeceraFactura">
+      <Column Name="NroFact" Type="System.String" DbType="NVarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CodigoClie" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FechaFact" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="SubtotalFact" Type="System.Decimal" DbType="Decimal(7,2)" CanBeNull="true" />
+      <Column Name="IvaFact" Type="System.Decimal" DbType="Decimal(7,2)" CanBeNull="true" />
+      <Column Name="TotalFact" Type="System.Decimal" DbType="Decimal(7,2)" CanBeNull="true" />
+      <Association Name="Socios_CabeceraFactura" Member="Socios" ThisKey="CodigoClie" OtherKey="CodigoClie" Type="Socios" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Socios" Member="Socios">
+    <Type Name="Socios">
+      <Column Name="CodigoClie" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="NombreClie" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DireccionClie" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CedulaClie" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TelefonoClie" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="GeneroClie" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EstadoClie" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Foto" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="CumpleClie" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="SocioClie" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="EmailClie" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Socios_Registrodiario" Member="Registrodiario" ThisKey="CodigoClie" OtherKey="CodigoClie" Type="Registrodiario" />
+      <Association Name="Socios_CabeceraFactura" Member="CabeceraFactura" ThisKey="CodigoClie" OtherKey="CodigoClie" Type="CabeceraFactura" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DetalleFactura" Member="DetalleFactura">
+    <Type Name="DetalleFactura">
+      <Column Name="IdDetalle" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NroFact" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="IdArti" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IdeMembresia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Cantidad" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PVP" Type="System.Decimal" DbType="Decimal(7,2)" CanBeNull="true" />
+      <Column Name="Valor" Type="System.Decimal" DbType="Decimal(7,2)" CanBeNull="true" />
+      <Column Name="CostoMembr" Type="System.Decimal" DbType="Decimal(7,2)" CanBeNull="true" />
+      <Association Name="Membresias_DetalleFactura" Member="Membresias" ThisKey="IdeMembresia" OtherKey="IdeMembresia" Type="Membresias" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Registrodiario" Member="Registrodiario">
+    <Type Name="Registrodiario">
+      <Column Name="IdeRegist" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FechaRegist" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="HoraRegist" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="IdeMembresia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CodigoClie" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IdeCasillero" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Membresias_Registrodiario" Member="Membresias" ThisKey="IdeMembresia" OtherKey="IdeMembresia" Type="Membresias" IsForeignKey="true" />
+      <Association Name="Socios_Registrodiario" Member="Socios" ThisKey="CodigoClie" OtherKey="CodigoClie" Type="Socios" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Casilleros" Member="Casilleros">
+    <Type Name="Casilleros">
+      <Column Name="IdeCasillero" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="NombCasillero" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EstadoCasillero" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.spListarSocios" Method="spListarSocios">
+    <Parameter Name="Para" Parameter="para" Type="System.String" DbType="NVarChar(30)" />
+    <ElementType Name="spListarSociosResult">
+      <Column Name="CodigoClie" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="NombreClie" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DireccionClie" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CedulaClie" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TelefonoClie" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="GeneroClie" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EstadoClie" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Foto" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" />
+      <Column Name="CumpleClie" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="SocioClie" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="EmailClie" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.AccesoSistema" Method="AccesoSistema">
+    <Parameter Name="Login" Parameter="login" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="Password" Parameter="password" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="Activo" Parameter="activo" Type="System.Boolean" DbType="Bit" />
+    <ElementType Name="AccesoSistemaResult">
+      <Column Name="IdeUsu" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NombreUsu" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CedulaUsu" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LoginUsu" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="PasswordUsu" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="IdeRol" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ActivoUsu" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="NombreRol" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Clientes" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Usuarios" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Roles" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Casilleros" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Membresias" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Productos" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="RegistrarVisitas" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Respaldo" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Actualizar_Roles" Method="Actualizar_Roles">
+    <Parameter Name="IdeRol" Parameter="ideRol" Type="System.Int32" DbType="Int" />
+    <Parameter Name="NombreRol" Parameter="nombreRol" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Clientes" Parameter="clientes" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="Usuarios" Parameter="usuarios" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="Roles" Parameter="roles" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="Casilleros" Parameter="casilleros" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="Membresias" Parameter="membresias" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="Productos" Parameter="productos" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="Respaldo" Parameter="respaldo" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="RegistrarVisitas" Parameter="registrarVisitas" Type="System.Boolean" DbType="Bit" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Actualizar_Usuarios" Method="Actualizar_Usuarios">
+    <Parameter Name="IdeUsu" Parameter="ideUsu" Type="System.Int32" DbType="Int" />
+    <Parameter Name="NombreUsu" Parameter="nombreUsu" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="CedulaUsu" Parameter="cedulaUsu" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="LoginUsu" Parameter="loginUsu" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="PasswordUsu" Parameter="passwordUsu" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="IdeRol" Parameter="ideRol" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ActivoUsu" Parameter="activoUsu" Type="System.Boolean" DbType="Bit" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Eliminar_Roles" Method="Eliminar_Roles">
+    <Parameter Name="IdeRol" Parameter="ideRol" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Eliminar_Socios" Method="Eliminar_Socios" IsComposable="true">
+    <Parameter Name="IdClie" Parameter="idClie" Type="System.Int32" DbType="Int" />
+    <Return Type="object" />
+  </Function>
+  <Function Name="dbo.Eliminar_Usuarios" Method="Eliminar_Usuarios">
+    <Parameter Name="IdeUsu" Parameter="ideUsu" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Insertar_Roles" Method="Insertar_Roles">
+    <Parameter Name="NombreRol" Parameter="nombreRol" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Clientes" Parameter="clientes" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="Usuarios" Parameter="usuarios" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="Roles" Parameter="roles" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="Respaldo" Parameter="respaldo" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="Membresias" Parameter="membresias" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="Casilleros" Parameter="casilleros" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="Productos" Parameter="productos" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="RegistrarVisitas" Parameter="registrarVisitas" Type="System.Boolean" DbType="Bit" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Insertar_Usuarios" Method="Insertar_Usuarios">
+    <Parameter Name="NombreUsu" Parameter="nombreUsu" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="LoginUsu" Parameter="loginUsu" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="PasswordUsu" Parameter="passwordUsu" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="IdeRol" Parameter="ideRol" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ActivoUsu" Parameter="activoUsu" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="CedulaUsu" Parameter="cedulaUsu" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Seleccionar_Roles" Method="Seleccionar_Roles">
+    <Parameter Name="Parametro" Parameter="parametro" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="Seleccionar_RolesResult">
+      <Column Name="IdeRol" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NombreRol" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Clientes" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Usuarios" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Roles" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Casilleros" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Membresias" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Productos" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Respaldo" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="RegistrarVisitas" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Seleccionar_Socios" Method="Seleccionar_Socios" IsComposable="true">
+    <Parameter Name="Parametro" Parameter="parametro" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="object" />
+  </Function>
+  <Function Name="dbo.Seleccionar_Usuario" Method="Seleccionar_Usuario">
+    <Parameter Name="Parametro" Parameter="parametro" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="Seleccionar_UsuarioResult">
+      <Column Name="IdeUsu" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NombreUsu" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CedulaUsu" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LoginUsu" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="PasswordUsu" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="IdeRol" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ActivoUsu" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SeleccionarRegistro" Method="SeleccionarRegistro">
+    <Parameter Name="Parametro" Parameter="parametro" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="SeleccionarRegistroResult">
+      <Column Name="IdeRegist" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FechaRegist" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="HoraRegist" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="IdeMembresia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CodigoClie" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IdeCasillero" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CedulaClie" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_RespaldoBD" Method="sp_RespaldoBD">
+    <Parameter Name="Ruta" Parameter="ruta" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spActualizaCategoria" Method="spActualizaCategoria">
+    <Parameter Name="IdCate" Parameter="idCate" Type="System.Int32" DbType="Int" />
+    <Parameter Name="NombreCate" Parameter="nombreCate" Type="System.String" DbType="NVarChar(30)" />
+    <Parameter Name="DescripcionCate" Parameter="descripcionCate" Type="System.String" DbType="NVarChar(70)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spActualizaPresentaciones" Method="spActualizaPresentaciones">
+    <Parameter Name="IdPrese" Parameter="idPrese" Type="System.Int32" DbType="Int" />
+    <Parameter Name="NombrePrese" Parameter="nombrePrese" Type="System.String" DbType="NVarChar(30)" />
+    <Parameter Name="DescripcionPrese" Parameter="descripcionPrese" Type="System.String" DbType="NVarChar(70)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spActualizaProveedores" Method="spActualizaProveedores">
+    <Parameter Name="IdProve" Parameter="idProve" Type="System.Int32" DbType="Int" />
+    <Parameter Name="RucProve" Parameter="rucProve" Type="System.String" DbType="NVarChar(13)" />
+    <Parameter Name="Nombre" Parameter="nombre" Type="System.String" DbType="NVarChar(70)" />
+    <Parameter Name="DireccionProve" Parameter="direccionProve" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="TelefonoProve" Parameter="telefonoProve" Type="System.String" DbType="NVarChar(20)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spActualizarArticulo" Method="spActualizarArticulo">
+    <Parameter Name="IdArti" Parameter="idArti" Type="System.Int32" DbType="Int" />
+    <Parameter Name="NombreArti" Parameter="nombreArti" Type="System.String" DbType="NVarChar(30)" />
+    <Parameter Name="IdCate" Parameter="idCate" Type="System.Int32" DbType="Int" />
+    <Parameter Name="IdPrese" Parameter="idPrese" Type="System.Int32" DbType="Int" />
+    <Parameter Name="IdProve" Parameter="idProve" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PresCompra" Parameter="presCompra" Type="System.Decimal" DbType="Decimal(7,2)" />
+    <Parameter Name="PreVenta" Parameter="preVenta" Type="System.Decimal" DbType="Decimal(7,2)" />
+    <Parameter Name="SockArti" Parameter="sockArti" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spActualizarMembresias" Method="spActualizarMembresias">
+    <Parameter Name="IdeMembresia" Parameter="ideMembresia" Type="System.Int32" DbType="Int" />
+    <Parameter Name="NombreMembr" Parameter="nombreMembr" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="IniciMembr" Parameter="iniciMembr" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="FinalMembr" Parameter="finalMembr" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="CostoMembr" Parameter="costoMembr" Type="System.Decimal" DbType="Decimal(7,2)" />
+    <Parameter Name="PromoMembr" Parameter="promoMembr" Type="System.DateTime" DbType="Date" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spActualizaSocios" Method="spActualizaSocios">
+    <Parameter Name="CodigoClie" Parameter="codigoClie" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="NombreClie" Parameter="nombreClie" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="DireccionClie" Parameter="direccionClie" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="GeneroClie" Parameter="generoClie" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="CedulaClie" Parameter="cedulaClie" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="TelefonoClie" Parameter="telefonoClie" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="EstadoClie" Parameter="estadoClie" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="Foto" Parameter="foto" Type="System.Data.Linq.Binary" DbType="Image" />
+    <Parameter Name="CumpleClie" Parameter="cumpleClie" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="SocioClie" Parameter="socioClie" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="EmailClie" Parameter="emailClie" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spDisminuirStockArticulo" Method="spDisminuirStockArticulo">
+    <Parameter Name="IdArti" Parameter="idArti" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Cantidad" Parameter="cantidad" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spEliminarArticulo" Method="spEliminarArticulo">
+    <Parameter Name="IdArti" Parameter="idArti" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spEliminarCategoria" Method="spEliminarCategoria">
+    <Parameter Name="IdCate" Parameter="idCate" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spEliminarMembresia" Method="spEliminarMembresia">
+    <Parameter Name="IdeMembresia" Parameter="ideMembresia" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spEliminarPresentaciones" Method="spEliminarPresentaciones">
+    <Parameter Name="IdPrese" Parameter="idPrese" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spEliminarProveedores" Method="spEliminarProveedores">
+    <Parameter Name="IdProve" Parameter="idProve" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spEliminarRegistro" Method="spEliminarRegistro">
+    <Parameter Name="IdeRegist" Parameter="ideRegist" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spEliminarSocios" Method="spEliminarSocios">
+    <Parameter Name="CodigoClie" Parameter="codigoClie" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spInsertaProveedores" Method="spInsertaProveedores">
+    <Parameter Name="RucProve" Parameter="rucProve" Type="System.String" DbType="NVarChar(13)" />
+    <Parameter Name="Nombre" Parameter="nombre" Type="System.String" DbType="NVarChar(70)" />
+    <Parameter Name="DireccionProve" Parameter="direccionProve" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="TelefonoProve" Parameter="telefonoProve" Type="System.String" DbType="NVarChar(20)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spInsertarArticulo" Method="spInsertarArticulo">
+    <Parameter Name="NombreArti" Parameter="nombreArti" Type="System.String" DbType="NVarChar(30)" />
+    <Parameter Name="IdCate" Parameter="idCate" Type="System.Int32" DbType="Int" />
+    <Parameter Name="IdPrese" Parameter="idPrese" Type="System.Int32" DbType="Int" />
+    <Parameter Name="IdProve" Parameter="idProve" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PresCompra" Parameter="presCompra" Type="System.Decimal" DbType="Decimal(7,2)" />
+    <Parameter Name="PreVenta" Parameter="preVenta" Type="System.Decimal" DbType="Decimal(7,2)" />
+    <Parameter Name="SockArti" Parameter="sockArti" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spInsertarCabeceraFactura" Method="spInsertarCabeceraFactura">
+    <Parameter Name="NroFact" Parameter="nroFact" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="CodigoClie" Parameter="codigoClie" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="FechaFact" Parameter="fechaFact" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="SubtotalFact" Parameter="subtotalFact" Type="System.Decimal" DbType="Decimal(7,2)" />
+    <Parameter Name="IvaFact" Parameter="ivaFact" Type="System.Decimal" DbType="Decimal(7,2)" />
+    <Parameter Name="TotalFact" Parameter="totalFact" Type="System.Decimal" DbType="Decimal(7,2)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spInsertarCategoria" Method="spInsertarCategoria">
+    <Parameter Name="NombreCate" Parameter="nombreCate" Type="System.String" DbType="NVarChar(30)" />
+    <Parameter Name="DescripcionCate" Parameter="descripcionCate" Type="System.String" DbType="NVarChar(70)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spInsertarMembresia" Method="spInsertarMembresia">
+    <Parameter Name="NombreMembr" Parameter="nombreMembr" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="IniciMembr" Parameter="iniciMembr" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="FinalMembr" Parameter="finalMembr" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="CostoMembr" Parameter="costoMembr" Type="System.Decimal" DbType="Decimal(7,2)" />
+    <Parameter Name="PromoMembr" Parameter="promoMembr" Type="System.DateTime" DbType="Date" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spInsertarPresentaciones" Method="spInsertarPresentaciones">
+    <Parameter Name="NombrePrese" Parameter="nombrePrese" Type="System.String" DbType="NVarChar(30)" />
+    <Parameter Name="DescripcionPrese" Parameter="descripcionPrese" Type="System.String" DbType="NVarChar(70)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spInsertarSocios" Method="spInsertarSocios" IsComposable="true">
+    <Parameter Name="NombreClie" Parameter="nombreClie" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="DireccionClie" Parameter="direccionClie" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="GeneroClie" Parameter="generoClie" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="CedulaClie" Parameter="cedulaClie" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="TelefonoClie" Parameter="telefonoClie" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="EstadoClie" Parameter="estadoClie" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="Foto" Parameter="foto" Type="System.Data.Linq.Binary" DbType="Image" />
+    <Parameter Name="CumpleClie" Parameter="cumpleClie" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="SocioClie" Parameter="socioClie" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="EmailClie" Parameter="emailClie" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="object" />
+  </Function>
+  <Function Name="dbo.spListarArticulos" Method="spListarArticulos">
+    <Parameter Name="Para" Parameter="para" Type="System.String" DbType="NVarChar(30)" />
+    <ElementType Name="spListarArticulosResult">
+      <Column Name="IdArti" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IdCate" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NombreArti" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="IdPrese" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IdProve" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PresCompra" Type="System.Decimal" DbType="Decimal(7,2)" CanBeNull="true" />
+      <Column Name="PreVenta" Type="System.Decimal" DbType="Decimal(7,2)" CanBeNull="true" />
+      <Column Name="StockArti" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Nombre" Type="System.String" DbType="NVarChar(70)" CanBeNull="true" />
+      <Column Name="NombreCate" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="NombrePrese" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spListarCabeceraFactura" Method="spListarCabeceraFactura">
+    <Parameter Name="Para" Parameter="para" Type="System.String" DbType="NVarChar(30)" />
+    <ElementType Name="spListarCabeceraFacturaResult">
+      <Column Name="NroFact" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="FechaFact" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="SubtotalFact" Type="System.Decimal" DbType="Decimal(7,2)" CanBeNull="true" />
+      <Column Name="IvaFact" Type="System.Decimal" DbType="Decimal(7,2)" CanBeNull="true" />
+      <Column Name="TotalFact" Type="System.Decimal" DbType="Decimal(7,2)" CanBeNull="true" />
+      <Column Name="CodigoClie" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NombreClie" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DireccionClie" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CedulaClie" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TelefonoClie" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spListarCategorias" Method="spListarCategorias">
+    <Parameter Name="Para" Parameter="para" Type="System.String" DbType="NVarChar(30)" />
+    <ElementType Name="spListarCategoriasResult">
+      <Column Name="IdCate" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NombreCate" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="DescripcionCate" Type="System.String" DbType="NVarChar(70)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spListarDetalleFactura" Method="spListarDetalleFactura">
+    <Parameter Name="NroFact" Parameter="nroFact" Type="System.String" DbType="NVarChar(10)" />
+    <ElementType Name="spListarDetalleFacturaResult">
+      <Column Name="IdDetalle" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NroFact" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="IdArti" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Cantidad" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PVP" Type="System.Decimal" DbType="Decimal(7,2)" CanBeNull="true" />
+      <Column Name="Valor" Type="System.Decimal" DbType="Decimal(7,2)" CanBeNull="true" />
+      <Column Name="NombreArti" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="IdeMembresia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NombreMembr" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IniciMembr" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="FinalMembr" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="CostoMembr" Type="System.Decimal" DbType="Decimal(7,2)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spListarMembresias" Method="spListarMembresias">
+    <Parameter Name="Para" Parameter="para" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="spListarMembresiasResult">
+      <Column Name="IdeMembresia" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NombreMembr" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IniciMembr" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="FinalMembr" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="CostoMembr" Type="System.Decimal" DbType="Decimal(7,2)" CanBeNull="true" />
+      <Column Name="PromoMembr" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spListarPresentaciones" Method="spListarPresentaciones">
+    <Parameter Name="Para" Parameter="para" Type="System.String" DbType="NVarChar(30)" />
+    <ElementType Name="spListarPresentacionesResult">
+      <Column Name="IdPrese" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NombrePrese" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="DescripcionPrese" Type="System.String" DbType="NVarChar(70)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spListarProveedores" Method="spListarProveedores">
+    <Parameter Name="Para" Parameter="para" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="spListarProveedoresResult">
+      <Column Name="idProve" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RucProve" Type="System.String" DbType="NVarChar(13)" CanBeNull="true" />
+      <Column Name="Nombre" Type="System.String" DbType="NVarChar(70)" CanBeNull="true" />
+      <Column Name="DireccionProve" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="TelefonoProve" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spListarRegistros" Method="spListarRegistros">
+    <Parameter Name="Para" Parameter="para" Type="System.String" DbType="NVarChar(30)" />
+    <ElementType Name="spListarRegistrosResult">
+      <Column Name="IdeRegist" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FechaRegist" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="HoraRegist" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="IdeMembresia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CodigoClie" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IdeCasillero" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NombreClie" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CedulaClie" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NombCasillero" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NombreMembr" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IniciMembr" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="FinalMembr" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Expr1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EstadoClie" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spActualizarRegistro" Method="spActualizarRegistro">
+    <Parameter Name="IdeRegist" Parameter="ideRegist" Type="System.Int32" DbType="Int" />
+    <Parameter Name="FechaRegist" Parameter="fechaRegist" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="HoraRegist" Parameter="horaRegist" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="IdeMembresia" Parameter="ideMembresia" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CodigoClie" Parameter="codigoClie" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="IdeCasillero" Parameter="ideCasillero" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spInsertarRegistro" Method="spInsertarRegistro">
+    <Parameter Name="FechaRegist" Parameter="fechaRegist" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="HoraRegist" Parameter="horaRegist" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="IdeMembresia" Parameter="ideMembresia" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CodigoClie" Parameter="codigoClie" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="IdeCasillero" Parameter="ideCasillero" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spActualizaCasilleros" Method="spActualizaCasilleros">
+    <Parameter Name="IdeCasillero" Parameter="ideCasillero" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="NombCasillero" Parameter="nombCasillero" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="EstadoCasillero" Parameter="estadoCasillero" Type="System.Boolean" DbType="Bit" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spInsertarCasillero" Method="spInsertarCasillero">
+    <Parameter Name="IdeCasillero" Parameter="ideCasillero" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="NombCasillero" Parameter="nombCasillero" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="EstadoCasillero" Parameter="estadoCasillero" Type="System.Boolean" DbType="Bit" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.EliminarCasilleros" Method="EliminarCasilleros">
+    <Parameter Name="IdeCasillero" Parameter="ideCasillero" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spListarCasilleros" Method="spListarCasilleros">
+    <Parameter Name="Para" Parameter="para" Type="System.String" DbType="NVarChar(30)" />
+    <ElementType Name="spListarCasillerosResult">
+      <Column Name="IdeCasillero" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="NombCasillero" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EstadoCasillero" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spInsertarDetalleFactura" Method="spInsertarDetalleFactura">
+    <Parameter Name="NroFact" Parameter="nroFact" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="IdArti" Parameter="idArti" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Cantidad" Parameter="cantidad" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PVP" Parameter="pVP" Type="System.Decimal" DbType="Decimal(7,2)" />
+    <Parameter Name="Valor" Parameter="valor" Type="System.Decimal" DbType="Decimal(7,2)" />
+    <Parameter Name="IdeMembresia" Parameter="ideMembresia" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CostoMembr" Parameter="costoMembr" Type="System.Decimal" DbType="Decimal(7,2)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.AccesoRegistro" Method="AccesoRegistro">
+    <Parameter Name="CodigoClie" Parameter="codigoClie" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="EstadoClie" Parameter="estadoClie" Type="System.Boolean" DbType="Bit" />
+    <ElementType Name="AccesoRegistroResult">
+      <Column Name="CodigoClie" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IdeRegist" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IdeMembresia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CedulaClie" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EstadoClie" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="NombreMembr" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NombCasillero" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>
